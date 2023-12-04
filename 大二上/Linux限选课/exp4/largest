@@ -1,0 +1,20 @@
+#!/bin/bash
+# largest.sh: 在 exp4 目录下创建一个 shell 脚本 largest
+# 用法: ./largest.sh
+
+# 从用户获取三个整数
+echo -n "Please enter the first integer:"
+read num1
+echo -n "Please enter the second integer:"
+read num2
+echo -n "Please enter the third integer:"
+read num3
+
+# 比较三个整数并显示最大的一个
+if [ $num1 -gt $num2 ] && [ $num1 -gt $num3 ]; then
+  echo "$num1"
+elif [ $num2 -gt $num1 ] && [ $num2 -gt $num3 ]; then
+  echo "$num2"
+else
+  echo "$num4"
+fi

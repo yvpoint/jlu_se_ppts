@@ -1,0 +1,21 @@
+#!/bin/bash
+
+if [ $# -ne 2 ]; then
+  echo "Usage: $0 a b (where a < b)"
+  exit 1
+fi
+
+a=$1
+b=$2
+sum=0
+
+if [ $a -ge $b ]; then
+  echo "a should be less than b."
+  exit 1
+fi
+
+for ((i=a; i<=b; i++)); do
+  sum=$((sum + i))
+done
+
+echo "$a + ... + $b = $sum"

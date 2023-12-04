@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo -n "Please input a username:"
+read name
+
+egrep "\<$name\>" /etc/passwd >/dev/null
+
+if [ $? -eq 0 ]; then
+    shell=$(grep "^$name:" /etc/passwd | awk -F':' '{print $7}')
+    echo "$name's shell is $shell"
+else
+    echo "$name not exists."
+fi

@@ -1,0 +1,12 @@
+The vi history
+The vi editor was developed at the University of California
+Berkeley as part of the Berkeley UNIX system.
+At the beginning the vi (visual) editor was part of the ex editor 
+and you had to be in the ex editor to use the vi editor.
+The vi part of the ex editor was often used and became 
+very popular. This popularity forced the creators to come up 
+with a separate vi editor.
+Now the vi editor is independent of the ex editor and is available 
+on most of the UNIX operating systems.
+The vi editor is a good, efficient editor for every editing jobs 
+although it could be more user friendly.

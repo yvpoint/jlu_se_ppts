@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# (1) 判断是否存在目录FILE4
+if [ -d "FILE4" ]; then
+    rm -r FILE4
+fi
+
+# 创建FILE4目录
+mkdir FILE4
+
+# 进入FILE4目录
+cd FILE4 || exit
+
+# (2) 创建100个文件
+for i in $(seq -w 001 100); do
+    touch "file$i"
+done
+
+# 返回到exp4目录
+cd ..
+
+# (3) 使用tar命令打包并压缩
+tar czf allfile.tar.gz FILE4/*
+
+# (4) 查看allfile.tar.gz文件的权限
+ls -l allfile.tar.gz
+
+# 修改其权限
+chmod 744 allfile.tar.gz
+
+# 再次查看权限，确认修改成功
+ls -l allfile.tar.gz
